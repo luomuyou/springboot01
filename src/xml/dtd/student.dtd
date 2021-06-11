@@ -1,0 +1,10 @@
+<!--约束文档，   顺序由外到内编写，student*表示必须出现零次或多次，正则表达式，另外student+表示可以出现一次或多次-->
+<!ELEMENT students (student*) >
+<!--定义对象变量-->
+<!ELEMENT student (name,age,sex) >
+<!--定义变量的数据类型，#PCDATA表示字符串-->
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT age (#PCDATA) >
+<!ELEMENT sex (#PCDATA) >
+<!--为student对象定义另一个属性number，唯一的，有点像数据库表中的主键-->
+<!ATTLIST student number ID #REQUIRED >

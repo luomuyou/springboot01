@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    1、填写xml文件的根元素
+    2、引入xsi前缀 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    3、引入xsi文件的命名空间  xsi:schemaLocation="http://www.itcast.cn/xml  stduent.xsd"
+    4、给命名空间设置一个前缀别名，a和b，用于大当有两个约束规则同事约束有一个xml文件时首先采取的那个约束规则,在标签前加上a:或b:
+-->
+<students xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.itcast.cn/xml  stduent.xsd
+                                http://www.itcast.cn/xml2  stduent2.xsd"
+            xmlns:a="http://www.itcast.cn/xml"
+            xmlns:b="http://www.itcast.cn/xml2"
+>
+    <student number="stu1">
+        <name>罗木又</name>
+        <age>22</age>
+        <sex>男</sex>
+    </student>
+    <student number="stu2">
+        <name>恰米</name>
+        <age>20</age>
+        <sex>女</sex>
+    </student>
+</students>
