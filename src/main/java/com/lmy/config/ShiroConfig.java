@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 整合springboot与shiro之前的配置类
+ * 整合springboot与shiro之前的配置类,hh
  */
 @Configuration
 public class ShiroConfig {
