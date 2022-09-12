@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h2>标签式授权主页</h2><br/>
+<h3 th:text="|欢迎 ${username} 登录|"></h3><br/>
+<a th:href="@{/user/logout}">退出用户</a>
+<!--<a th:href="/user/logout">退出用户</a>-->
+<p shiro:hasRole="admin">你的角色为超级管理员</p>
+<p shiro:hasRole="user">你的角色为普通使用者账户</p>
+<p shiro:Authenticated>
+  认证之后才会显示的内容
+</p>
+<p shiro:notAuthenticated>
+  公共资源，没有认证也会显示的内容
+</p>
+
+<ul>
+  <!--表示这里面的连接就只有admin角色权限的用户才能显示-->
+  <ul shiro:hasRole="admin">
+    <li><a href="#">商品管理</a></li>
+    <li><a href="#">订单管理</a></li>
+    <li><a href="#">物流管理</a></li>
+  </ul>
+
+  <div shiro:hasAnyRoles="user,admin"> <!--当前有user,admin这两个角色-->
+    <li>有user,admin这两个角色中的一个
+
+      <ul>
+        <p shiro:hasPermission name="user:add:*">
+          <li><a th:href="">添加</a></li>
+        </p>
+        <p shiro:hasPermission name="user:delete:*">
+          <li><a th:href="">删除</a></li>
+        </p>
+        <p shiro:hasPermission name="user:update:*">
+          <li><a th:href="">修改</a></li>
+        </p>
+        <p shiro:hasPermission name="order:find:*">
+          <li><a th:href="">查询</a></li>
+        </p>
+      </ul>
+    </li>
+  </div>
+</ul>
+</body>
+</html>
