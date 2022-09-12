@@ -17,7 +17,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * 拦截器配置类，需要实现WebMvcConfigurer接口
- * 重写addInterceptors把我们自定义的拦截器注册到里面
+ * 重写addInterceptors把我们自定义的拦截器注册到里面  问我我
  *
  */
 @Configuration      //相当xml配置文件
