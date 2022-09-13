@@ -20,7 +20,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * 重写addInterceptors把我们自定义的拦截器注册到里面
  *
  */
-@Configuration      //相当xml配置文件
+@Configuration      //相当xml配置文件2
 public class MyConfig implements WebMvcConfigurer {
     //shymleaf与shiro一起使用配置
     @Bean
