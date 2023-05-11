@@ -32,7 +32,7 @@ class Springboot015ShiroApplicationTests {
 	@Autowired
 	private UserDao userDao;
 
-	private final String salt = "!@#$%";	//JWT密钥
+	private final String salt = "!@#$%";	//JWT密钥---
 	private String str = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNzd29yZCI6ImUyNTdmYjE3YmNkYTQ4YjU0YzkxZDJmOTE5ODA5OWFkIiwidXNlck5hbWUiOiJsdW9tdXlvdSIsImV4cCI6MTYzNzIxMjEzMCwicGFzc3dvcmROb3RTYWx0IjoibHVvbXV5b3UifQ.5qarQjeKNVy3A93NNQHHwdb4pA4W5GbbBU-wzss_1BE";
 
 	@Test
