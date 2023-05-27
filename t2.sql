@@ -15,12 +15,8 @@ test01 sql 04
 333
 
 444
-2324456
+
 
 55
 
 6666
-
-undo commit 只能回滚最后一条commit记录
-
-drop commit 提交log记录会消失
