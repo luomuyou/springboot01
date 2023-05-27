@@ -23,4 +23,4 @@ test01 sql 04
 
 undo commit 只能回滚最后一条commit记录
 
-drop commit
+drop commit 提交log记录会消失
