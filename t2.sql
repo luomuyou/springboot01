@@ -22,3 +22,5 @@ test01 sql 04
 6666
 
 undo commit 只能回滚最后一条commit记录
+
+drop commit
