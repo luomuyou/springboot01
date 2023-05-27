@@ -20,3 +20,5 @@ test01 sql 04
 55
 
 6666
+
+undo commit 只能回滚最后一条commit记录
